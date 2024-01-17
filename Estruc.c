@@ -17,7 +17,7 @@ void Resultados(struct Alumno *alumno);
 int main()
 {
     int num; // Número de alumnos
-    printf("Indique la cantidad de alumnos que desea ingresar:\n ");
+    printf("Indique la cantidad de alumnos que desea ingresar:\n");
     scanf("%d", &num);
     fflush(stdin); // Limpiar el búfer 
 
@@ -33,6 +33,7 @@ int main()
     // bucle para mostrar los datos de cada alumno
     for (int i = 0; i < num; i++)
     {
+        printf("********************************");
         printf("\nDatos del alumno %d:\n", i + 1);
         Resultados(&estudiante[i]);
     }
@@ -42,20 +43,29 @@ int main()
 // Función para ingresar los datos de un alumno
 void Datos(struct Alumno *alumno)
 {
-    printf("Matricula:\n ");
+    printf("Matricula:\n");
     scanf("%d", &alumno->matricula);
     fflush(stdin);
 
-    printf("Nombre:\n ");
+    printf("Nombre:\n");
     gets(alumno->nombre);
 
-    printf("Direccion:\n ");
+    printf("Direccion:\n");
     gets(alumno->direccion);
 
-    printf("Carrera:\n ");
+    printf("Carrera:\n");
     gets(alumno->carrera);
 
-    printf("Promedio:\n ");
+    printf("Promedio:\n");
     scanf("%f", &alumno->promedio);
     fflush(stdin);
+}
+// Función para mostrar los datos de un alumno
+void Resultados(struct Alumno *alumno)
+{
+    printf("Matricula: %d\n", alumno->matricula);
+    printf("Nombre: %s\n", alumno->nombre);
+    printf("Direccion: %s\n", alumno->direccion);
+    printf("Carrera: %s\n", alumno->carrera);
+    printf("Promedio: %.2f\n", alumno->promedio);
 }
