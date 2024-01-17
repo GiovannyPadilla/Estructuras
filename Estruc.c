@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Definición de la estructura alumno
+//Definición de la estructura alumno
 struct Alumno
 {
     int matricula;
@@ -9,3 +9,7 @@ struct Alumno
     char carrera[50];
     float promedio;
 };
+
+//funcion para los datos y los resultados
+void Datos(struct Alumno *alumno);
+void Resultados(struct Alumno *alumno);
