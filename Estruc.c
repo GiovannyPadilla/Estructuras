@@ -39,3 +39,23 @@ int main()
 
     return 0;
 }
+// Función para ingresar los datos de un alumno
+void Datos(struct Alumno *alumno)
+{
+    printf("Matricula:\n ");
+    scanf("%d", &alumno->matricula);
+    fflush(stdin);
+
+    printf("Nombre:\n ");
+    gets(alumno->nombre);
+
+    printf("Direccion:\n ");
+    gets(alumno->direccion);
+
+    printf("Carrera:\n ");
+    gets(alumno->carrera);
+
+    printf("Promedio:\n ");
+    scanf("%f", &alumno->promedio);
+    fflush(stdin);
+}
